@@ -5,7 +5,7 @@
 [node name="World" type="Node2D"]
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2(-96, -3)
+position = Vector2(74, 5)
 scale = Vector2(45.75, 59.25)
 mesh = SubResource("QuadMesh_snbcr")
 
