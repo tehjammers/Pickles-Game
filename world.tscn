@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxrwgnwh1fa1g"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_snbcr"]
+
+[node name="World" type="Node2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(-96, -3)
+scale = Vector2(45.75, 59.25)
+mesh = SubResource("QuadMesh_snbcr")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -66.0
+offset_top = -61.0
+offset_right = 94.0
+offset_bottom = -38.0
+text = "can anyone see this?"
