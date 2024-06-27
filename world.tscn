@@ -1,24 +1,50 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxrwgnwh1fa1g"]
+[gd_scene load_steps=4 format=3 uid="uid://bxrwgnwh1fa1g"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_snbcr"]
+[ext_resource type="Texture2D" uid="uid://ciku760rb1o2c" path="res://Sprites/Tiles/Stone Platform Tile.png" id="1_vdxfl"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u6n25"]
+texture = ExtResource("1_vdxfl")
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_it46w"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_u6n25")
 
 [node name="World" type="Node2D"]
+position = Vector2(-150, 11)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2(74, 5)
-scale = Vector2(45.75, 59.25)
-mesh = SubResource("QuadMesh_snbcr")
-
-[node name="Label" type="Label" parent="."]
-offset_left = -66.0
-offset_top = -61.0
-offset_right = 94.0
-offset_bottom = -38.0
-text = "can anyone see this?"
-
-[node name="Label2" type="Label" parent="."]
-offset_left = -66.0
-offset_top = 58.0
-offset_right = 87.0
-offset_bottom = 81.0
-text = "Dragons aren't real."
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(182, 7)
+tile_set = SubResource("TileSet_it46w")
+collision_animatable = true
+format = 2
+layer_0/enabled = false
+layer_0/y_sort_enabled = true
+layer_1/tile_data = PackedInt32Array(65534, 0, 2, 131070, 0, 3, 65535, 65536, 2, 131071, 65536, 3, 65532, 0, 2, 131068, 0, 3, 65533, 65536, 2, 131069, 65536, 3, 65530, 0, 2, 131066, 0, 3, 65531, 65536, 2, 131067, 65536, 3, 65528, 0, 2, 131064, 0, 3, 65529, 65536, 2, 131065, 65536, 3, 65526, 0, 2, 131062, 0, 3, 65527, 65536, 2, 131063, 65536, 3, 65524, 0, 2, 131060, 0, 3, 65525, 65536, 2, 131061, 65536, 3, 0, 0, 2, 65536, 0, 3, 1, 65536, 2, 65537, 65536, 3, 2, 0, 2, 65538, 0, 3, 3, 65536, 2, 65539, 65536, 3, 4, 0, 2, 65540, 0, 3, 5, 65536, 2, 65541, 65536, 3, 6, 0, 2, 65542, 0, 3, 7, 65536, 2, 65543, 65536, 3, -65548, 0, 2, -12, 0, 3, -196620, 0, 2, -131084, 0, 3, -327692, 0, 2, -262156, 0, 3, -327691, 0, 2, -327690, 65536, 2, -327689, 0, 2, -327688, 65536, 2, -327687, 0, 2, -327686, 65536, 2, -327685, 0, 2, -327684, 65536, 2, -327683, 0, 2, -327682, 65536, 2, -327681, 0, 2, -393216, 65536, 2, -393215, 0, 2, -393214, 65536, 2, -393213, 0, 2, -393212, 65536, 2, -393211, 0, 2, -393210, 65536, 2, -65529, 0, 2, -131065, 0, 2, -196601, 0, 2, -262137, 0, 2, -327673, 0, 2, -393209, 0, 2)
